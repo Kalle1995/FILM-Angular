@@ -1,0 +1,24 @@
+<fieldset class="genre-fieldset">
+  <legend>{{ genre }}</legend>
+  <div class="image-carousel">
+    <!-- Föregående knapp med 'navigate_before' ikonen -->
+    <button class="arrow left" (click)="moveToPrev()">
+      <span class="material-icons">navigate_before</span>  <!-- Material Icon för vänsterpil -->
+    </button>
+
+    <!-- Filmer i karusellen -->
+    <div class="carousel-images">
+      <div *ngFor="let movie of visibleMovies">
+        <!-- Länk till detaljsidan för varje film -->
+        <a [routerLink]="['/movie', movie.name]">
+          <img [src]="movie.image" [alt]="movie.name" class="carousel-image" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Nästa knapp med 'navigate_next' ikonen -->
+    <button class="arrow right" (click)="moveToNext()">
+      <span class="material-icons">navigate_next</span>  <!-- Material Icon för högerpil -->
+    </button>
+  </div>
+</fieldset>

@@ -1,0 +1,147 @@
+/* Grundläggande styling för headern */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1e1e2f; /* Mörkblå/grå bakgrund */
+  color: #f5f5f5; /* Ljus textfärg */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Styling för meny-knappen */
+.menu-button {
+  background: none;
+  border: none;
+  color: #f5f5f5; /* Ljus text för knappen */
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Dropdown-menyn som visas när man klickar på meny-knappen */
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  background: #333; /* Mörk bakgrund för dropdown */
+  color: #f5f5f5; /* Ljus text */
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Mjukare skugga */
+}
+
+.dropdown-menu li {
+  padding: 10px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #f5f5f5; /* Ljus text för länkar */
+}
+
+.dropdown-menu li:hover {
+  background-color: #444;
+  cursor: pointer;
+}
+
+/* Styling för logo-texten */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #f5f5f5; /* Ljus text för logon */
+  cursor: pointer;
+}
+
+/* Styling för sökfältet */
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-bar input {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #555; /* Ljusare kantfärg */
+  background-color: #2d2d3b; /* Mörk bakgrund för input */
+  color: #f5f5f5; /* Ljus text i input */
+  width: 200px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888; /* Mjukare färg för ikonen */
+}
+
+/* Styling för Sign Up-länken */
+.signup {
+  color: #f5f5f5; /* Ljus text */
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 5px 15px;
+  border-radius: 25px;
+  background-color: #3a3a56; /* Bakgrundsfärg för knappen */
+
+}
+
+.signup:hover {
+  background-color: #5c5c8a;
+  cursor: pointer;
+
+}
+
+/* Search Results */
+.search-results {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: #333; /* Mörk bakgrund */
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Mjukare skugga */
+  width: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.search-results li {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #444; /* Ljusare linje mellan sökresultaten */
+}
+
+.search-results li:last-child {
+  border-bottom: none;
+}
+
+.search-results li a {
+  text-decoration: none;
+  color: #f5f5f5; /* Ljus text för länkar i sökresultaten */
+  display: flex;
+  align-items: center;
+}
+
+.movie-thumbnail {
+  width: 40px;
+  height: 60px;
+  margin-right: 10px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.search-results li:hover {
+  background-color: #555; /* Mörkare bakgrund vid hover */
+}

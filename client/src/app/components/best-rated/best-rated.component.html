@@ -1,0 +1,29 @@
+<section class="best-rated-section">
+  <div class="Best-p">
+    <!-- Rubrik till vänster -->
+    <p>Best Rated Movies</p>
+
+    <!-- Bild + pilar till höger -->
+    <div class="image-carousel" *ngIf="bestRatedMovies.length > 0">
+      <button class="arrow left" (click)="goPrevious()">&#10094;</button>
+
+      <div class="carousel-images">
+        <a
+          *ngIf="bestRatedMovies[currentIndex]"
+          [routerLink]="['/movie', encodeMovieName(bestRatedMovies[currentIndex].name)]"
+        >
+          <img
+            [src]="bestRatedMovies[currentIndex].image"
+            [alt]="bestRatedMovies[currentIndex].name"
+            class="carousel-image"
+          />
+          <p class="movie-name">
+            {{ bestRatedMovies[currentIndex].name }}
+          </p>
+        </a>
+      </div>
+
+      <button class="arrow right" (click)="goNext()">&#10095;</button>
+    </div>
+  </div>
+</section>

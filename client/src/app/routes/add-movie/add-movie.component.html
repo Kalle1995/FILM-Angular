@@ -1,0 +1,28 @@
+<div class="add-movie">
+  <h2 class="add-movie__title">Add a new movie</h2>
+  <form class="add-movie__form" (ngSubmit)="handleSubmit()">
+    <label class="add-movie__label">Name of film:</label>
+    <input class="add-movie__input" type="text" name="name" [(ngModel)]="formData.name" required />
+
+    <label class="add-movie__label">Image URL:</label>
+    <input class="add-movie__input" type="text" name="image" [(ngModel)]="formData.image" required />
+
+    <label class="add-movie__label">Year:</label>
+    <input class="add-movie__input" type="text" name="year" [(ngModel)]="formData.year" required />
+
+    <label class="add-movie__label">Type of film:</label>
+    <select class="add-movie__select" name="type" [(ngModel)]="formData.type">
+      <option value="Action">Action</option>
+      <option value="Drama">Drama</option>
+      <option value="SIFI">SIFI</option>
+    </select>
+
+    <label class="add-movie__label">Description:</label>
+    <textarea class="add-movie__textarea" name="description" [(ngModel)]="formData.description" required></textarea>
+
+    <label class="add-movie__label">Rating (1-5):</label>
+    <input class="add-movie__input" type="number" name="rating" [(ngModel)]="formData.rating" min="1" max="5" required />
+
+    <button class="add-movie__button" type="submit">Add Movie</button>
+  </form>
+</div>

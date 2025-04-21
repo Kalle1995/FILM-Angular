@@ -1,0 +1,40 @@
+<header class="header">
+  <!-- Menu -->
+  <nav class="menu">
+    <button class="menu-button" (click)="toggleMenu()">☰ Meny</button>
+    <ul class="dropdown-menu" *ngIf="menuOpen">
+      <li><a (click)="navigateTo('/')">Home</a></li>
+      <li><a (click)="navigateTo('/about-us')">About Us</a></li>
+      <li><a (click)="navigateTo('/add-movie')">Add Movie</a></li>
+    </ul>
+  </nav>
+
+  <!-- Logo -->
+  <h1 class="logo">
+    <a (click)="navigateTo('/')">FILM</a>
+  </h1>
+
+  <!-- Search bar -->
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Sök efter filmer..."
+      [(ngModel)]="searchQuery"
+      (input)="handleSearch($event)"
+    />
+    <i class="search-icon" style="color: white;">🔍</i>
+
+    <!-- Search results -->
+    <ul class="search-results" *ngIf="filteredMovies.length > 0">
+      <li *ngFor="let movie of filteredMovies">
+        <a (click)="navigateToMovie(movie.name)">
+          <img [src]="movie.image" alt="{{ movie.name }}" class="movie-thumbnail" />
+          {{ movie.name }} ({{ movie.year }})
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Sign Up link -->
+  <a (click)="navigateTo('/sigen-up')" class="signup">Sign Up</a>
+</header>

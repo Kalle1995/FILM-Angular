@@ -1,0 +1,52 @@
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.movie-info h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.movie-info img {
+  width: 300px;  /* Justera bildstorleken efter behov */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.movie-info p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.movie-info p strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* För att göra sidan mer responsiv */
+@media (max-width: 640px) {
+  .movie-info {
+    padding: 10px;
+  }
+
+  .movie-info h1 {
+    font-size: 2rem;
+  }
+
+  .movie-info img {
+    width: 250px;
+  }
+
+  .movie-info p {
+    font-size: 1rem;
+  }
+}

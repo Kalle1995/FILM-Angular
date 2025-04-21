@@ -1,0 +1,11 @@
+<section class="suggestion-section">
+  <h2>Suggested Movies</h2>
+  <div class="movie-cards">
+    <div class="movie-card" *ngFor="let movie of movies.slice(0, 3)">
+      <a [routerLink]="['/movie', encodeMovieName(movie.name)]">
+        <img [src]="movie.image" [alt]="movie.name" class="movie-image" />
+        <p class="movie-name">{{ movie.name }}</p>
+      </a>
+    </div>
+  </div>
+</section>

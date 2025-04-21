@@ -1,0 +1,20 @@
+<app-header></app-header>
+
+<div class="home-content">
+  <!-- Best Rated Movies Section -->
+  <app-best-rated *ngIf="bestRatedMovies.length > 0" [movies]="bestRatedMovies"></app-best-rated>
+
+  <!-- Suggested Movies Section -->
+  <app-suggested *ngIf="movies.length > 0" [movies]="movies"></app-suggested>
+
+  <!-- Fieldset for Genre Sections -->
+  <app-fieldset *ngFor="let genre of ['Action', 'Drama', 'Sci-Fi']; let i = index"
+                 [genre]="genre"
+                 [movies]="movies"
+                 [currentIndex]="currentIndices[i]"
+                 (indexChange)="onIndexChange(i, $event)">
+  </app-fieldset>
+
+  <!-- Displaying each movie clickable to navigate -->
+
+<app-footer></app-footer>

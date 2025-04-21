@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+
+<div *ngIf="loading">Laddar...</div>
+<div *ngIf="error">{{ error }}</div>
+
+<div *ngIf="movie" class="movie-info">
+  <h2>{{ movie.name }}</h2>
+  <img [src]="movie.image" alt="{{ movie.name }}" class="movie-image" />
+  <p>{{ movie.description }}</p>
+  <p><strong>År:</strong> {{ movie.year }}</p>
+  <p><strong>Genre:</strong> {{ movie.type }}</p>
+  <p><strong>Betyg:</strong> {{ movie.rating }}</p>
+</div>
+
+
+<app-footer></app-footer>
