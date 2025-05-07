@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Angular Standalone App</title>
+    <title>FILM</title>
 
     <base href="/">
+    <!-- Viktigt för Angulars routing. Denna bas-URL säger att alla länkar och rutter i appen ska tolkas relativt till webbrotens / -->
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Laddar in Font Awesome, ett populärt ikonbibliotek. Detta gör det möjligt att använda ikoner som <i class="fa fa-user"></i> i dina komponenter. -->
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Laddar Googles egna Material Icons, som används i många Angular Material-komponenter eller direkt med <i class="material-icons">home</i>. -->
   </head>
   <body>
     <app-root></app-root> <!-- Här refererar vi till vår huvudkomponent -->

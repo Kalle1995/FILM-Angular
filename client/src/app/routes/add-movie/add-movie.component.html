@@ -1,6 +1,9 @@
 <div class="add-movie">
   <h2 class="add-movie__title">Add a new movie</h2>
   <form class="add-movie__form" (ngSubmit)="handleSubmit()">
+    <!-- ngSubmit-attributet är ett Angular-sätt att hantera formulärets inlämning.
+    Här är det bundet till metoden handleSubmit() i din TypeScript-komponent
+    (det hanterar formulärets inlämning när användaren klickar på "Add Movie"-knappen). -->
     <label class="add-movie__label">Name of film:</label>
     <input class="add-movie__input" type="text" name="name" [(ngModel)]="formData.name" required />
 

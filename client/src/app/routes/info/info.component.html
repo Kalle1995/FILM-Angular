@@ -4,13 +4,13 @@
 <div *ngIf="loading">Laddar...</div>
 <div *ngIf="error">{{ error }}</div>
 
-<div *ngIf="movie" class="movie-info">
+<div *ngIf="movie" class="movie-info"> <!-- Visas endast när movie har fått data (inte null). -->
   <h2>{{ movie.name }}</h2>
   <img [src]="movie.image" alt="{{ movie.name }}" class="movie-image" />
   <p>{{ movie.description }}</p>
   <p><strong>År:</strong> {{ movie.year }}</p>
   <p><strong>Genre:</strong> {{ movie.type }}</p>
-  <p><strong>Betyg:</strong> {{ movie.rating }}</p>
+  <p><strong>Betyg:</strong> {{ movie.rating }} <strong> av 5 </strong></p>
 </div>
 
 

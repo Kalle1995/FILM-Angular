@@ -1,62 +1,72 @@
 .about-us-container {
-  background-color: #f4f4f4;
+  background: linear-gradient(to bottom, #fdfdfd, #f0f0f0);
   color: #333;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px 20px;
   min-height: 100vh;
 }
 
 .about-us-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .about-us-header h1 {
-  font-size: 3rem;
-  color: #333;
+  font-size: 3.5rem;
+  color: #222;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .about-us-content {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
+  display: grid;
+  gap: 30px;
 }
 
 .about-us-info {
-  background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease-in-out;
+}
+
+.about-us-info:hover {
+  transform: translateY(-4px);
 }
 
 .about-us-info h2 {
-  font-size: 2rem;
-  color: #007bff;
-  margin-bottom: 10px;
+  font-size: 2.2rem;
+  color: #0077cc;
+  margin-bottom: 12px;
 }
 
 .about-us-info p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
 }
 
 .about-us-info a {
-  color: #007bff;
+  color: #0077cc;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .about-us-info a:hover {
   text-decoration: underline;
 }
 
-/* Footer styling */
+/* Optional footer for this section */
 .about-us-footer {
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  background-color: #333;
+  padding: 25px;
+  margin-top: 60px;
+  background-color: #2c2c2c;
   color: white;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .about-us-footer p {
@@ -65,7 +75,7 @@
 }
 
 /* Responsiv design */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .about-us-container {
     padding: 20px;
   }
@@ -75,14 +85,15 @@
   }
 
   .about-us-info h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .about-us-info p {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .about-us-footer p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 }
+

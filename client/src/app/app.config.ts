@@ -1,5 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter, withHashLocation } from '@angular/router';
+import { provideRouter } from '@angular/router';
 import { routes } from './app.routes'; // Importera korrekt routes
 import { provideHttpClient } from '@angular/common/http';
 
@@ -9,3 +9,5 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient()
   ]
 };
+
+// med Provide så det betyder att man registrerar ett värde, em tjänst eller en bibliotek i Angular.

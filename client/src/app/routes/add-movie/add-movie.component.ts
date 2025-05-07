@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-add-movie',
+  selector: 'app-add-movie', // tag represnterar komponent
   standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './add-movie.component.html',
   styleUrls: ['./add-movie.component.css']
 })
 export class AddMovieComponent {
-  formData = {
+  formData = { // Definiera objektet formData
     name: '',
     image: '',
     year: '',
@@ -22,6 +22,7 @@ export class AddMovieComponent {
 
   constructor(private http: HttpClient) {}
 
+  // hantera formulärinlämning
   handleSubmit() {
     this.http.post('http://localhost:8000/api/movies', this.formData).subscribe({
       next: () => {
