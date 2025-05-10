@@ -20,11 +20,12 @@ export class AddMovieComponent {
     rating: 1
   };
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {} // ligger den i komponenten för att kunna navända den för att skicka http anrop till servern
 
   // hantera formulärinlämning
   handleSubmit() {
     this.http.post('http://localhost:8000/api/movies', this.formData).subscribe({
+    //subscribe(): Lyssnar på svaret från servern och utför en åtgärd baserat på om det lyckades eller om det uppstod ett fel.
       next: () => {
         alert('Filmen har lagts till!');
         this.formData = {

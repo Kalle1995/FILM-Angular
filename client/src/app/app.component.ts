@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-// import { CommonModule } from '@angular/common'; // För *ngIf, *ngFor
-import { RouterModule, Routes } from '@angular/router'; // För router-outlet och routing
+import { RouterModule } from '@angular/router'; // För router-outlet och routing
+
+
 /*
+import { CommonModule } from '@angular/common'; // För *ngIf, *ngFor
 import { AboutUsComponent } from './routes/about-us/about-us.component'; // Importera AboutUsComponent
 import { SigenUpComponent } from './routes/sigen-up/sigen-up.component';  // Importera SigenUpComponent
 import { InfoComponent } from './routes/info/info.component';
@@ -22,7 +24,7 @@ import { InfoComponent } from './routes/info/info.component';
   template: `<router-outlet></router-outlet>`,
 })
 export class AppComponent {
-  
+
 }
 
 

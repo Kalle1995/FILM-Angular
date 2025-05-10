@@ -1,17 +1,20 @@
 <section class="best-rated-section">
   <div class="Best-p">
-    <!-- Rubrik till vänster -->
     <p>Best Rated Movies</p>
 
-    <!-- Bild + pilar till höger -->
     <div class="image-carousel" *ngIf="bestRatedMovies.length > 0">
-      <button class="arrow left" (click)="goPrevious()">&#10094;</button>
+      <button class="arrow left" (click)="goPrevious()">&#10094;</button> <!-- &#10094; är vänster pil -->
 
       <div class="carousel-images">
         <a
           *ngIf="bestRatedMovies[currentIndex]"
           [routerLink]="['/movie', encodeMovieName(bestRatedMovies[currentIndex].name)]"
         >
+        <!--
+         *ngIf="bestRatedMovies[currentIndex]": Denna Angular-direktiv säkerställer
+          att länken bara skapas om det finns en film vid det nuvarande indexet.
+          Filens namn kodas via metoden encodeMovieName() för att säkerställa att den fungerar korrekt i en URL.
+        -->
           <img
             [src]="bestRatedMovies[currentIndex].image"
             [alt]="bestRatedMovies[currentIndex].name"
@@ -23,7 +26,7 @@
         </a>
       </div>
 
-      <button class="arrow right" (click)="goNext()">&#10095;</button>
+      <button class="arrow right" (click)="goNext()">&#10095;</button> <!-- &#10095; höger pil -->
     </div>
   </div>
 </section>

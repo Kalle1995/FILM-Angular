@@ -1,32 +1,21 @@
-import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { Movie } from '../../models/movie.model';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BestRatedComponent } from './best-rated.component';
 
-@Component({
-  selector: 'app-best-rated',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './best-rated.component.html',
-  styleUrls: ['./best-rated.component.css']
-})
-export class BestRatedComponent {
-encodeMovieName(arg0: string): any|string {
-throw new Error('Method not implemented.');
-}
-  @Input() movies: Movie[] = [];
+describe('BestRatedComponent', () => {
+  let component: BestRatedComponent;
+  let fixture: ComponentFixture<BestRatedComponent>;
 
-  currentIndex = 0;
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [BestRatedComponent]
+    }).compileComponents();
 
-  get bestRatedMovies(): Movie[] {
-    return this.movies.filter(movie => movie.rating === 5);
-  }
+    fixture = TestBed.createComponent(BestRatedComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-  goPrevious(): void {
-    this.currentIndex = this.currentIndex === 0 ? this.bestRatedMovies.length - 1 : this.currentIndex - 1;
-  }
-
-  goNext(): void {
-    this.currentIndex = this.currentIndex === this.bestRatedMovies.length - 1 ? 0 : this.currentIndex + 1;
-  }
-}
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

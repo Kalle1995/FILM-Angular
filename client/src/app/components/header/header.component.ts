@@ -9,7 +9,7 @@ import { Movie } from '../../models/movie.model';  // Justera sökvägen om den 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, FormsModule, FontAwesomeModule], // Lägg till FontAwesomeModule här om det behövs
+  imports: [CommonModule, FormsModule, FontAwesomeModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
@@ -21,7 +21,7 @@ export class HeaderComponent {
 
   constructor(private router: Router) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void { // ngOnInit Denna metod körs när komponenten initieras
     // Hämta filmer från API
     fetch('http://localhost:8000/api/movies')
       .then((response) => response.json())
@@ -56,7 +56,7 @@ export class HeaderComponent {
   }
 
   // Navigera till olika sidor baserat på länken
-  navigateTo(path: string): void {
+   navigateTo(path: string): void {
     this.router.navigate([path]);
   }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule, Router } from '@angular/router';  // Importera Router och RouterModule
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -23,7 +23,6 @@ library.add(faChevronLeft, faChevronRight);
   standalone: true,
   imports: [
     CommonModule,
-    HttpClientModule,
     FontAwesomeModule,  // Lägg till FontAwesomeModule här
     RouterModule,  // För navigation
     HeaderComponent,  // Importera HeaderComponent
