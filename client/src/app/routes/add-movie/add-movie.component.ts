@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; // FormsModule i Angular används för att möjliggöra formulärhantering med tvåvägsbindning och template-driven forms.
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -20,7 +20,7 @@ export class AddMovieComponent {
     rating: 1
   };
 
-  constructor(private http: HttpClient) {} // ligger den i komponenten för att kunna navända den för att skicka http anrop till servern
+  constructor(private http: HttpClient) {} // ligger den i komponenten för att kunna använda den för att skicka http anrop till servern
 
   // hantera formulärinlämning
   handleSubmit() {

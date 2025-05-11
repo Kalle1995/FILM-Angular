@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router'; // Importera Router för navigering
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // För ngModel
+import { FormsModule } from '@angular/forms'; // FormsModule i Angular används för att möjliggöra formulärhantering med tvåvägsbindning och template-driven forms.
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // Lägg till FontAwesomeModule här om det behövs
 import { Movie } from '../../models/movie.model';  // Justera sökvägen om den är annorlunda
 
