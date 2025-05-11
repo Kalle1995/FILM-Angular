@@ -14,7 +14,7 @@ import { Movie } from '../../models/movie.model';  // Justera sökvägen om den 
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  menuOpen: boolean = false;
+  menuOpen: boolean = false; 
   searchQuery: string = '';
   movies: Movie[] = [];
   filteredMovies: Movie[] = [];
@@ -32,7 +32,7 @@ export class HeaderComponent {
   }
 
   // Hantera sökfunktionen
-  handleSearch(event: Event): void {
+  handleSearch(event: Event): void { // void betyder att en funktion inte returnerar något värde
     const query = (event.target as HTMLInputElement).value.toLowerCase();
     this.searchQuery = query;
 

@@ -35,13 +35,14 @@ library.add(faChevronLeft, faChevronRight);
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  movies: Movie[] = [];
+    // implements OnInit betyder att komponenten har en ngOnInit()-metod som körs när komponenten laddas.
+  movies: Movie[] = []; // innehåller alla filmer från API:et.
   bestRatedMovies: Movie[] = [];
   currentIndices: number[] = [0, 0, 0]; // Index för varje genre
 
   constructor(private http: HttpClient, private router: Router) {}  // Lägg till Router i konstruktoren
 
-  ngOnInit(): void {
+  ngOnInit(): void { // ngOnInit call back method
     this.http.get<Movie[]>('http://localhost:8000/api/movies')
       .subscribe((data: Movie[]) => {
         this.movies = data;
